@@ -1,5 +1,11 @@
 const { app, BrowserWindow } = require('electron');
-const TabGroup = require("electron-tabs");
+
+// const mainWindow = new electron.BrowserWindow({
+//     webPreferences: {
+//       nodeIntegration: true,
+//       webviewTag: true
+//     }
+//   });
 
 function createWindow () {
   const win = new BrowserWindow({
