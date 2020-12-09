@@ -1,22 +1,20 @@
 const { app, BrowserWindow } = require('electron');
 
-// const mainWindow = new electron.BrowserWindow({
-//     webPreferences: {
-//       nodeIntegration: true,
-//       webviewTag: true
-//     }
-//   });
+
 
 function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webviewTag: true
     }
-  })
+  });
 
-  win.loadFile('index.html')
+  win.openDevTools();
+
+  win.loadFile('index.html');
 }
 
 app.whenReady().then(createWindow)
@@ -32,3 +30,10 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+// const mainWindow = new BrowserWindow({
+//     webPreferences: {
+//       nodeIntegration: true,
+//       webviewTag: true
+//     }
+//   });
