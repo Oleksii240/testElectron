@@ -29,7 +29,7 @@ let tab1 = tabGroup.addTab({
 // 4. Add a new tab that contains a local HTML file
 let tab2 = tabGroup.addTab({
     title: "Local File",
-    src: "./local.html",
+    src: "https://ourcodeworld.com",
     visible: true,
     // If the page needs to access Node.js modules, be sure to
     // enable the nodeintegration
