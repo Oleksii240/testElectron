@@ -22,10 +22,10 @@ let tab2 = tabGroup.addTab({
     }
 });
 
-
-
 tab2.webview.addEventListener('dom-ready', () => {
     tab2.webview.executeJavaScript(`var body = document.querySelector(".ListingLayout-outerContainer div");
+    var text = document.querySelector("._1poyrkZ7g36PawDueRza-J h3");
+    var textBg = document.querySelector("._1poyrkZ7g36PawDueRza-J");
     var secondBody = document.querySelector(".ListingLayout-outerContainer");
     var elementButtonScroll = document.querySelector(".wBtTDilkW_rtT2k5x3eie")
     body.style.cssText = "color: blue; border: 1px solid black !important; background-color: black !important;";
@@ -50,8 +50,8 @@ tab2.webview.addEventListener('dom-ready', () => {
 
     document.querySelector(".scrollButton").addEventListener('click', myFancyFunction);
 
-    console.log(scrollButton);
-
-    console.log(elementButtonScroll);`);
+    text.style.cssText = "color: white; font-style: italic;";
+    textBg.style.cssText = "background-color: black;"
+    `);
 });
 
